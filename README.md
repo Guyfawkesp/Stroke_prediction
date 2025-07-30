@@ -153,7 +153,6 @@ Shows the correlations between all features, including engineered variables, and
 - Notes: Good recall but low precision.  
 
 ![Logistic Regression - Classification Report](data/classification_report_and_confusion_matrix_Logistic_Regression.png)  
-![Logistic Regression - PR Curve](data/precision_recall_threshold_plot_LogisticRegression.png)
 
 ---
 
@@ -166,7 +165,6 @@ Shows the correlations between all features, including engineered variables, and
 - Notes: Slight improvement in F1 due to class balance.  
 
 ![Logistic Regression SMOTE - Classification Report](data/classification_report_and_confusion_matrix_Logistic_Regression_SMOTE.png)  
-![Logistic Regression SMOTE - PR Curve](data/precision_recall_threshold_plot_LogisticRegression_SMOTE.png)
 
 ---
 
@@ -179,7 +177,7 @@ Shows the correlations between all features, including engineered variables, and
 - Notes: Most optimized logistic setup with a good balance.  
 
 ![Logistic Regression Tuned - Classification Report](data/classification_report_and_confusion_matrix_Logistic_Regression_Tuned_SMOTE.png)  
-![Logistic Regression Tuned - PR Curve](data/precision_recall_threshold_plot_LogisticRegression_Tuned_SMOTE.png)
+![Logistic Regression Tuned - PR Curve](data/F1_Score_Logistic_Regression_Tuned_SMOTE.png)
 
 ---
 
@@ -192,7 +190,6 @@ Shows the correlations between all features, including engineered variables, and
 - Notes: Higher F1 score compared to logistic models.  
 
 ![Gradient Boosting - Classification Report](data/classification_report_and_confusion_matrix_GradientBoosting_SMOTE.png)  
-![Gradient Boosting - PR Curve](data/precision_recall_threshold_plot_GradientBoosting_SMOTE.png)
 
 ---
 
@@ -205,7 +202,8 @@ Shows the correlations between all features, including engineered variables, and
 - Notes: Best-performing model overall.  
 
 ![Gradient Boosting Tuned - Classification Report](data/classification_report_and_confusion_matrix_GradientBoosting_Tuned_SMOTE.png)  
-![Gradient Boosting Tuned - PR Curve](data/precision_recall_threshold_plot_GradientBoosting_Tuned_SMOTE.png)
+![Gradient Boosting - PR Curve](data/precision_recall_curve_with_thresholds_GradientBoosting_Tuned_SMOTE.png)
+![Gradient Boosting - PR Curve](data/F1_Score_threshold_plot_GradientBoosting_Tuned_SMOTE.png)
 
 ---
 
@@ -218,7 +216,6 @@ Shows the correlations between all features, including engineered variables, and
 - Notes: Solid baseline performance.  
 
 ![Random Forest Threshold - Classification Report](data/classification_report_and_confusion_matrix_RandomForestClassifier_SMOTE.png)  
-![Random Forest Threshold - PR Curve](data/precision_recall_threshold_plot_RandomForestClassifier_Threshold_SMOTE.png)
 
 ---
 
@@ -231,7 +228,7 @@ Shows the correlations between all features, including engineered variables, and
 - Notes: Very high recall but poor overall balance.  
 
 ![Random Forest Tuned - Classification Report](data/classification_report_and_confusion_matrix_RandomForestClassifier_Tuned_SMOTE.png)  
-![Random Forest Tuned - PR Curve](data/precision_recall_threshold_plot_RandomForestClassifier_Tuned_SMOTE.png)
+![Random Forest Tuned - PR Curve](data/F1_Score_RandomForestClassifier_Tuned_SMOTE.png)
 
 ---
 
