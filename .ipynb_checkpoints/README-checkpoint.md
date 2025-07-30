@@ -201,6 +201,6 @@ This project aims to address that gap with a data-driven solution to support tim
 - Notes: Performs well but not the best model.  
 
 ![Neural Network - Classification Report](data/classification_report_and_confusion_NN.png)  
-![Neural Network - PR Curve](precision_recall_threshold_plot_NN.png)
+![Neural Network - PR Curve](data/precision_recall_threshold_plot_NN.png)
 
 ---
