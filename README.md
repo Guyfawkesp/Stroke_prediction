@@ -140,6 +140,16 @@ Shows the correlations between all features, including engineered variables, and
 
 ---
 
+### Handling Class Imbalance with SMOTE
+
+Synthetic Minority Over-sampling Technique (SMOTE) is a widely used approach to tackle class imbalance in datasets. In cases where the minority class (such as patients who experienced a stroke) is underrepresented, models tend to be biased towards the majority class, which can result in poor detection of the minority class.
+
+SMOTE addresses this by generating synthetic examples of the minority class. It does so by interpolating between existing minority samples, effectively increasing their number and balancing the dataset.
+
+This balanced dataset enables the machine learning model to better learn the distinguishing features of the minority class, leading to improved performance metrics like recall and F1-score. Using SMOTE is particularly valuable in medical prediction tasks where accurately identifying minority class instances (e.g., stroke cases) is critical.
+
+---
+
 ## Model Performance Summary
 
 ---
@@ -268,5 +278,33 @@ Shows the correlations between all features, including engineered variables, and
 
 ![Neural Network - Classification Report](data/classification_report_and_confusion_NN.png)  
 ![Neural Network - PR Curve](data/precision_recall_threshold_plot_NN.png)
+
+---
+
+## Conclusion
+
+Based on the evaluation metrics across multiple models, the **Gradient Boosting classifier with SMOTE and hyperparameter tuning** clearly outperforms others, achieving the highest accuracy (90.47%), balanced precision (0.81), recall (0.80), and F1-score (0.80). This indicates it is the most reliable model for predicting stroke risk, effectively handling class imbalance and capturing complex relationships in the data.
+
+While other models like XGBoost and SVC also show strong performance, the tuned Gradient Boosting model provides the best overall balance between sensitivity and specificity, making it the preferred choice for practical deployment in stroke risk prediction.
+
+---
+
+## Future Expansion
+
+- **Model Deployment:**  
+  The best-performing model has been saved using joblib for easy reuse. This serialized model can be integrated into a web application or API to enable real-time stroke risk prediction in clinical settings.
+
+- **External Validation:**  
+  Test the model on external or newer datasets to verify generalizability and robustness across populations.
+
+- **Feature Expansion:**  
+  Incorporate additional clinical variables or patient history data (e.g., medication, family history) to improve prediction accuracy.
+
+- **Explainability & Interpretability:**  
+  Use tools like SHAP or LIME to provide interpretable insights for healthcare providers, enhancing trust in the model’s predictions.
+
+- **Monitoring & Maintenance:**  
+  Set up pipelines to monitor model performance over time and update it as new data becomes available to avoid performance degradation.
+
 
 ---
