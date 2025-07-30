@@ -1,5 +1,9 @@
 # Stroke Prediction using Machine Learning
 
+<div style="text-align: center;">
+  <img src="data/heart_ml.jpeg" alt="Stroke Prediction" />
+</div>
+
 ## Research Question
 
 Can we accurately predict the likelihood of a patient experiencing a stroke based on health and lifestyle factors using machine learning?
@@ -68,6 +72,71 @@ We also aim to uncover the most influential features in stroke prediction, such 
 Stroke is the second leading cause of death globally, accounting for approximately 11% of all deaths (source: World Health Organization).  
 Early detection is critical, yet healthcare systems often lack effective, accessible tools to assess stroke risk.  
 This project aims to address that gap with a data-driven solution to support timely intervention and improve patient outcomes.
+
+---
+
+## Exploratory Data Analysis (EDA)
+
+<div style="text-align: center;">
+  <img src="data/EDA.jpeg" alt="Stroke Prediction" />
+</div>
+
+### Missing Data Percentage
+
+![Missing Data Percentage](data/missing_values_percentage.png)
+
+### Target Variable Distribution (Stroke Occurrence)
+
+The dataset is imbalanced, with stroke cases being the minority class.
+
+![Stroke Occurrence Distribution](data/stroke_occurrence_distribution.png)
+
+### Distribution of Numerical Variables
+
+Important numeric features such as age, glucose level, and BMI show varied distributions.
+
+![Distribution of Age](data/distribution_age.png)  
+![Distribution of Avg Glucose Level](data/distribution_avg_glucose_level.png)  
+![Distribution of BMI](data/distribution_bmi.png)
+
+### Initial Correlation Heatmap (Numeric Features)
+
+Shows relationships between numeric features and stroke incidence.
+
+![Correlation Heatmap](data/correlation_heatmap.png)
+
+### Numerical Feature Distributions by Stroke Outcome
+
+Comparison of numeric features between stroke and non-stroke groups.
+
+![Numerical Distributions by Stroke](data/numerical_distributions_by_stroke.png)
+
+### Boxplots for Numerical Features by Stroke Outcome
+
+Visualizes spread and outliers for numerical features by stroke status.
+
+![Boxplot Numerical vs Stroke](data/boxplot_numerical_vs_stroke.png)
+
+### Categorical Feature Stroke Rate Visualization
+
+Stroke rate by categories such as gender, marital status, work type, residence, smoking status, hypertension, and heart disease.
+
+![Stroke Rate by Categorical Feature](data/stroke_rate_by_categorical_feature.png)
+
+---
+
+## Feature Engineering
+
+- Missing BMI values were imputed using K-Nearest Neighbors to improve model accuracy and recall.  
+- Smoking status was mapped to a numeric risk score to quantify its impact.  
+- A combined cardiovascular risk feature was created by summing hypertension, heart disease, and smoking risk.  
+- BMI was binned into categories like Underweight, Normal, Overweight, and Obese for better model interpretability.
+
+### Final Correlation Heatmap for All Features
+
+Shows the correlations between all features, including engineered variables, and stroke occurrence.
+
+![Final Correlation Heatmap](data/correlation_heatmap_final.png)
 
 ---
 
